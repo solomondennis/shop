@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="FreeUser" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" type="text/css" href="multiselect/jquery.multiselect.css"/>
+    <link rel="stylesheet" type="text/css" href="multiselect/demos/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.css"/>
+<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="bootstrap/dist/css/bootstrap-theme.min.css"/>
+<script src="jquery/jquery.js"></script>
+<script src="jqueryui/js/jquery-ui-1.8.6.custom.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+  <script src="jqueryui/external/jquery/jquery.js"></script>
+  <script src="jqueryui/jquery-ui.js"></script>
+  <script src="multiselect/src/jquery.multiselect.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css"/>
+<script type="text/javascript">
+$(function(){
+	
+	// default
+	$("#test-1").multiselect({
+		header: true
+	});
+	
+	// off
+	$("#test-2").multiselect({
+		header: false
+	});
+	
+	// custom text
+	$("#test-3").multiselect({
+		header: "Choose options below"
+	});
+	
+});
+</script>
+
+	<title>Untitled 3</title>
+    <script>
+    function toggleme(master,one){
+        var all = document.getElementsByClassName(one);
+        for(var i=0; i < all.length; i++){
+            did=document.getElementById(all[i].id);
+            did.checked = master.checked
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<select title="Basic example" id="test-1" multiple="multiple" name="example-basic" size="4">
+	<option value="option1">Option 1</option>
+	<option value="option2">Option 2</option>
+	<option value="option3">Option 3</option>
+	<option value="option4">Option 4</option>
+	<option value="option5">Option 5</option>
+	<option value="option6">Option 6</option>
+	<option value="option7">Option 7</option>
+	<option value="option8">Option 8</option>
+	<option value="option9">Option 9</option>
+	<option value="option10">Option 10</option>
+	<option value="option11">Option 11</option>
+	<option value="option12">Option 12</option>
+	</select>
+
+
+<script>
+    function toggleme(master,one){
+        var all = document.getElementsByClassName(one);
+        for(var i=0; i < all.length; i++){
+            did = document.getElementById(all[i].id);
+            did.checked = master.checked
+        }
+    }
+    </script>
+<table id="tab1">
+  <tr>
+    <td>
+      <input type="checkbox" name="checkAll" id="checkAll" onchange="toggleme(this,'booka')"  />Select all
+      <input type="checkbox" name="book" id="book1" class="booka" value="book1">book1
+      <input type="checkbox" name="book" id="book2" class="booka" value="book2">book2
+      <input type="checkbox" name="book" id="book3" class="booka" value="book3">book3
+    </td>
+  </tr>
+</table>
+
+<table id="tab2">
+  <tr>
+    <td>
+      <input type="checkbox" name="checkAll" id="checkAll" onchange="toggleme(this,'book')"  />Select all
+      <input type="checkbox" name="book" id="book3" class="book" value="book1">book1
+      <input type="checkbox" name="book" id="book4" class="book" value="book2">book2
+      <input type="checkbox" name="book" id="book5" class="book" value="book3">book3
+    </td>
+  </tr>
+</table>
+
+<div class="data">    
+    <span>
+    <input name="employee" type="checkbox"  value="Alex"/>
+    <label for="employee">Alex</label>
+    </span> 
+
+    <span>
+    <input name="employee" type="checkbox" value="Frank"/>
+    <label for="employee">Frank</label>
+    </span>    
+
+    <span>
+    <input name="employee" type="checkbox" value="Mark"/>
+    <label for="employee">Mark</label>
+    </span>
+
+    <input type="button" onclick="getCheckedCheckboxesFor('employee');" value="Get Values" />
+</div>
+
+<form name="myForm">
+<select name="myOption" id="mut" multiple >
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+<BR><BR>
+<input type=submit value="Print First" onClick="printMe()"/>
+
+<input type=submit value="Print All" onClick="printAll()"/>
+<form method="post">
+    
+    <span>
+    <input id="employe" name="employe" type="checkbox"  value="Alex"/>
+    <label for="employee">Alex</label>
+    </span> 
+
+    <span>
+    <input id="employe" name="employe" type="checkbox" value="Frank"/>
+    <label for="employee">Frank</label>
+    </span>    
+
+    <span>
+    <input id="employe" name="employe" type="checkbox" value="Mark"/>
+    <label for="employee">Mark</label>
+    </span>
+
+<input name="searchDonor" type="button" class="button" value="Search Donor" onclick="getcheck()" />
+</form>
+
+<form>
+<select name="icOptions" id="icOptions" style="display:" multiple="multiple">
+  <option value="Choose an Option" selected="selected">Choose a Team </option>
+  <option value="IDX">IDX</option>
+  <option value="Support">SUPPORT</option>
+  <option value="webapps">WEBAPPS</option>
+</select>
+<input type="button" value="punch" onclick="change()"/>
+</form>
+<script>
+function change(){
+var fld = document.getElementById('icOptions');
+var values = new Array;
+for (var i = 0; i < fld.options.length; i++) {
+  if (fld.options[i].selected) {
+    var check = values.push(fld.options[i].value);
+    alert (check);
+  }
+}
+alert (values);
+}
+</script>
+<script>
+var checkboxes = document.getElementsByName('location');
+var vals = "";
+for (var i=0, n=checkboxes.length;i<n;i++) {
+  if (checkboxes[i].checked) 
+  {
+  vals += ","+checkboxes[i].value;
+  }
+}
+if (val) val = val.substring(1);
+function show(){
+    alert(val);
+}
+</script>
+<script>
+function printAll() {
+var mut = document.getElementById('mut');
+var str="",i;
+
+for (i=0;i<myForm.myOption.options.length;i++) {
+    if (myForm.myOption.options[i].selected) {
+        str = str + i + " ";
+    }
+}
+
+alert("Options selected are " + str);
+}
+</script>
+
+<script type="text/javascript">
+function getCheckedCheckboxesFor(checkboxName) {
+    var checkboxes = document.querySelectorAll('input[name="' + checkboxName + '"]:checked'), values = [];
+    Array.prototype.forEach.call(checkboxes, function(el) {
+        values.push(el.value);
+    });
+    var gone = "";
+    if(values!==""){
+    gone = values;
+}else if(values!==""){
+    gone = values['0'];
+}
+    alert (gone);
+}
+</script>
+<script>
+function getcheck(){
+var checkboxes = document.getElementsByName('employe');
+var selected = [];
+for (var i=0; i<checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+        selected.push(checkboxes[i].value);
+        var checker = selected.push(checkboxes[i].value);
+    }
+}
+alert(selected);
+}
+</script>
+
+<script>
+function checkget(){
+var checkboxes = document.getElementsById('employe');
+var selected = [];
+for (var i=0; i<checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+        selected.push(checkboxes[i].value);
+        var checker = selected.push(checkboxes[i].value);
+    }
+}
+alert(selected);
+}
+</script>
+
+
+<script language="JavaScript" type="text/javascript">
+var checeked = 0;
+function ValidateCompare(){
+var c = document.getElementsNyName('compare');
+for(var i=0;i<c.length;c++)
+{
+if (c[i].checked)
+checked++;
+}
+if(checked>5)
+alert('You may only choose a maximum of 5 selections.');
+else if(checked<2)
+alert('You must choose at least 2 selections.');
+else
+return true;
+return false;
+}
+</script>
+
+<input type="text" value="'+image_url+'" name="webcampics[]" class="webcampics">
+<input type="text" value="'+image_url+'" name="webcampics[]" class="webcampics">
+<input type="text" value="'+image_url+'" name="webcampics[]" class="webcampics">
+<input type="text" value="'+image_url+'" name="webcampics[]" class="webcampics">
+
+<script>
+var inputs = document.getElementsByClassName( 'webcampics' ),
+    names  = [].map.call(inputs, function( input ) {
+        return input.value;
+    }).join( '|' );
+
+alert(names);
+
+var elem = document.getElementsByTagName("input");
+  var names = [];
+  for (var i = 0; i < elem.length; ++i) {
+    if (typeof elem[i].attributes.id !== "undefined") {
+      if (elem[i].attributes.id.value == "webcampics") {
+        names.push(elem[i].value);
+      }
+    }
+  }
+
+</script>
+
+</body>
+</html>
